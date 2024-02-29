@@ -1,0 +1,4 @@
+# vi: ft=i3config
+
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id sleep 1 && feh --bg-fill $HOME/.config/i3/wallpaper.png

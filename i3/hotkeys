@@ -1,0 +1,49 @@
+# vi: ft=i3config
+
+# Start a terminal
+bindsym $mod+Return exec kitty
+bindsym $mod+c exec kitty
+
+# i3 management
+bindsym $mod+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+b focus up
+bindsym $mod+o focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+b move up
+bindsym $mod+Shift+o move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+x layout toggle split
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+# Multimedia keys
+bindsym $mod+F12 exec amixer -D pipewire sset Master 5%+
+bindsym $mod+F11 exec amixer -D pipewire sset Master 5%-
+
+bindsym $mod+F8 exec playerctl play-pause
+
+bindsym $mod+e exec /usr/bin/thunar
+bindsym Print exec spectacle -c

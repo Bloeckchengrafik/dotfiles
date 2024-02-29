@@ -1,0 +1,27 @@
+# vi: ft=i3config
+
+
+bindsym $mod+d exec rofi -modi drun -show drun \
+                -config ~/.config/rofi/rofidmenu.rasi
+
+#bindsym F9 exec rofi -modi drun -show drun \
+#               -config ~/.config/rofi/rofidmenu.rasi
+
+## rofi bindings for window menu ($mod+t /F10 optional disabled)
+
+bindsym $mod+t exec rofi -show window \
+                -config ~/.config/rofi/rofidmenu.rasi
+
+#bindsym F10 exec rofi -show window \
+#               -config ~/.config/rofi/rofidmenu.rasi
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+y move scratchpad
+bindsym $mod+Alt+y scratchpad show
+
+## rofi bindings to manage clipboard (install rofi-greenclip from the AUR)
+
+exec --no-startup-id greenclip daemon>/dev/null
+bindsym $mod+a exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard \
+                -config ~/.config/rofi/rofidmenu.rasi
+
+bindsym $mod+y exec --no-startup-id rofi -show scratchpad -modi "scratchpad:~/.config/i3/scripts/scratchpad.sh" -config ~/.config/rofi/rofidmenu.rasi

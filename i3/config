@@ -1,0 +1,23 @@
+#vi: ft=i3config
+
+font pango: Noto Sans Regular 10
+
+set $mod Mod4
+
+default_border pixel 0
+workspace_layout default
+
+hide_edge_borders both
+
+gaps inner 5
+gaps outer 5
+
+floating_modifier $mod
+
+include ./workspaces
+include ./resize
+include ./hotkeys
+include ./compositor
+include ./windows
+include ./autostart
+include ./appmenu
